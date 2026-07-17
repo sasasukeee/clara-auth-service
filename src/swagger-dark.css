@@ -1,0 +1,43 @@
+/* Background */
+.swagger-ui {
+    background: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+/* Text */
+.swagger-ui .opblock-summary-description,
+.swagger-ui .opblock-summary-path,
+.swagger-ui .opblock-summary-method {
+    color: #e0e0e0 !important;
+}
+
+/* Sidebar */
+.swagger-ui .topbar {
+    background: #1e1e1e !important;
+    border-bottom: 1px solid #333;
+}
+
+/* Input boxes */
+.swagger-ui input,
+.swagger-ui select,
+.swagger-ui textarea {
+    background: #1e1e1e !important;
+    color: #fff !important;
+}
+
+/* Method colors */
+.opblock.opblock-get {
+    background: #0d47a1 !important;
+}
+
+.opblock.opblock-post {
+    background: #1b5e20 !important;
+}
+
+.opblock.opblock-put {
+    background: #4e342e !important;
+}
+
+.opblock.opblock-delete {
+    background: #b71c1c !important;
+}
