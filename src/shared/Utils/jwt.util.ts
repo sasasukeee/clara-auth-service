@@ -32,10 +32,20 @@ export class JwtUtil {
     this.keyId = process.env.JWT_KEY_ID;
 
     // PRIVATE KEY (jwt sign için)
-    this.privateKey = readFileSync(privateKeyPath, 'utf8');
+    const envPrivKey = process.env.JWT_PRIVATE_KEY;
+    if (envPrivKey) {
+      this.privateKey = envPrivKey.replace(/\\n/g, '\n');
+    } else {
+      this.privateKey = readFileSync(privateKeyPath, 'utf8');
+    }
 
     // PUBLIC KEY (jwt verify için)
-    this.publicKey = readFileSync(publicKeyPath, 'utf8');
+    const envPubKey = process.env.JWT_PUBLIC_KEY;
+    if (envPubKey) {
+      this.publicKey = envPubKey.replace(/\\n/g, '\n');
+    } else {
+      this.publicKey = readFileSync(publicKeyPath, 'utf8');
+    }
   }
 
   // ------------------------------------------------------------------------
