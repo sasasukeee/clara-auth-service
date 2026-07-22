@@ -1,5 +1,5 @@
-import { Injectable, OnModuleDestroy, OnModuleInit } from '@nestjs/common';
-import { PrismaClient } from '../../generated/prisma/client';
+﻿import { Injectable, OnModuleDestroy, OnModuleInit } from '@nestjs/common';
+import { PrismaClient } from '@prisma/client';
 import { PrismaPg } from '@prisma/adapter-pg';
 import { Pool } from 'pg';
 import { HttpAdapterHost } from '@nestjs/core';
@@ -28,3 +28,4 @@ export class PrismaService
     await this.$disconnect();
   }
 }
+

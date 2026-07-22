@@ -1,7 +1,7 @@
-import { Injectable } from '@nestjs/common';
+﻿import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../../Prisma/prisma.service';
 import { Session, SessionsRepositoryPort } from './sessions.repository.port';
-import type { refresh_tokens } from '../../../../generated/prisma/client';
+import type { refresh_tokens } from '@prisma/client';
 
 @Injectable()
 export class SessionsRepository extends SessionsRepositoryPort {
@@ -67,3 +67,4 @@ export class SessionsRepository extends SessionsRepositoryPort {
     };
   }
 }
+
